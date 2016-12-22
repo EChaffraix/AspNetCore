@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>5e1b1e9b-5f28-41a7-8eeb-037b642a58ba</ProjectGuid>
+    <ProjectGuid>a0fb6d3d-6ad0-4ecf-b520-33ae2c04be66</ProjectGuid>
     <RootNamespace>SoaWebsite.Services</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
