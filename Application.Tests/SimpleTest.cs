@@ -15,6 +15,7 @@ namespace Application.Tests
         {
             int result = Program.NUnitTestFunction();
             Assert.AreEqual(35, result);
+
         }
     }
 }
