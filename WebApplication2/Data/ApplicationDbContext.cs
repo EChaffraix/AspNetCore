@@ -24,5 +24,7 @@ namespace WebApplication2.Data
         }
 
         public DbSet<Developer> Developer { get; set; }
+
+        public DbSet<DeveloperSkill> DeveloperSkill { get; set; }
     }
 }
