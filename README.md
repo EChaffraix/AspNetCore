@@ -1,5 +1,5 @@
-# AspNetCore
-A simple example of ASP.Net Core project
+# AspNetCore : Find the right consultant 
+A simple example of ASP.Net Core project 
 
 ## Build
     $files=@("SoaWebsite.Common\project.json", "SoaWebsite.Services\project.json", "SoaWebsite.Web\project.json")
@@ -14,3 +14,4 @@ Services :
 Website :
 
     cd SoaWebsite.Web; dotnet run 
+
