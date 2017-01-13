@@ -41,6 +41,23 @@ namespace SoaWebsite.Web.Controllers
 
             return View(developer);
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var developer = await _context.Developers.SingleOrDefaultAsync(m => m.ID == id);
+            if (developer == null)
+            {
+                return NotFound();
+            }
+
+            return View(developer);
+        }
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -89,6 +106,34 @@ namespace SoaWebsite.Web.Controllers
                 return RedirectToAction("Index");
             }
             return View(developer);
+        }
+
+        // GET: Developers/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var developer = await _context.Developers.SingleOrDefaultAsync(m => m.ID == id);
+            if (developer == null)
+            {
+                return NotFound();
+            }
+
+            return View(developer);
+        }
+
+        // POST: Developers/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var developer = await _context.Developers.SingleOrDefaultAsync(m => m.ID == id);
+            _context.Developers.Remove(developer);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
         private bool DeveloperExists(int id)
