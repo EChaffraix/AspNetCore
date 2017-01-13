@@ -28,10 +28,5 @@ namespace SoaWebsite.Services
 
             host.Run();
         }
-
-        public static int NUnitTestFunction()
-        {
-            return 35;
-        }
     }
 }
